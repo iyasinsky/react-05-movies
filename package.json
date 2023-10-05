@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "axios": "^1.5.1",
     "modern-normalize": "^2.0.0",
     "prop-types": "^15.8.1",
     "styled-components": "^6.0.7"

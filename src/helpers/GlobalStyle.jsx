@@ -1,22 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
 
-export const GlobalStyle = createGlobalStyle`
-  h1, h2, h3, p, ul, img {
-    margin: 0;
-    padding: 0;
-  }
+const GlobalStyle = createGlobalStyle`
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
 
-  ul {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  img {
-    display: block;
-    max-width: 100%;
-  }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 `;
+
+export default GlobalStyle;
