@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import { Container, Header, NavLinkStyled } from './Layout.styled';
+import { Container, Header, NavLinkStyled } from './index.styled';
 
-export const Layout = () => {
+const Layout = () => {
   return (
     <Container>
       <Header>
@@ -14,3 +14,5 @@ export const Layout = () => {
     </Container>
   );
 };
+
+export default Layout;
