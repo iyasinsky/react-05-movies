@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import GlobalStyle from 'helpers/GlobalStyle';
 import Layout from './Layout';
-import Home from '../pages/Home';
-import Movies from '../pages/Movies';
-import MovieDetails from '../pages/MovieDetails';
-import Cast from '../pages/Cast';
-import Reviews from '../pages/Reviews';
+import Home from 'pages/Home';
+import Movies from 'pages/Movies';
+import MovieDetails from 'pages/MovieDetails';
+import Cast from 'pages/Cast';
+import Reviews from 'pages/Reviews';
 
 const App = () => {
   return (
