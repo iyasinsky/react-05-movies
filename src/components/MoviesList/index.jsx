@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 
-const MoviesList = ({ movies, to, title }) => {
+const MoviesList = ({ movies, to, title, location }) => {
   return (
     <main>
       {title && <h1>Trending today</h1>}
       <ul>
         {movies.map(({ id, title }) => (
           <li key={id}>
-            <Link to={`${to}${id}`}>{title}</Link>
+            <Link to={`${to}${id}`} state={{ from: location }}>
+              {title}
+            </Link>
           </li>
         ))}
       </ul>

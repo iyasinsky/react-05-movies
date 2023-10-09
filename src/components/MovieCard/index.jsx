@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Wrapper } from './index.styled';
 
 const BASE_URL = 'https://image.tmdb.org/t/p/w300/';
@@ -8,9 +8,15 @@ const MovieCard = ({
   movie: { poster_path, title, release_date, vote_average, overview, genres },
 }) => {
   const posterImg = poster_path ? `${BASE_URL}${poster_path}` : DEFAULT_IMG;
-
+  const location = useLocation();
+  console.log('MovieCard -> location:', location);
+  const backLinkHref = location.state?.from ?? '/';
   return (
     <>
+      <button>
+        <Link to={backLinkHref}>← Go back</Link>
+      </button>
+
       <Wrapper>
         <img src={posterImg} alt={title} />
         <div>

@@ -1,12 +1,13 @@
 import MoviesList from 'components/MoviesList';
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { searchMovies } from 'services/movieApi';
 
 const Movies = () => {
   const [movies, setMovies] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
   const searchQuery = searchParams.get('query') ?? '';
+  const location = useLocation();
 
   useEffect(() => {
     if (searchQuery === '') return setSearchParams({});
@@ -29,7 +30,7 @@ const Movies = () => {
         <input type="text" name="input" placeholder="Enter the movie title" />
         <button type="submit">Search</button>
       </form>
-      {movies && <MoviesList movies={movies} to="" />}
+      {movies && <MoviesList movies={movies} to="" location={location} />}
     </>
   );
 };
