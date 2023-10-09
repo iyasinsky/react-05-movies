@@ -9,9 +9,7 @@ const Movies = () => {
   const searchQuery = searchParams.get('query') ?? '';
 
   useEffect(() => {
-    if (searchQuery === '') {
-      return setSearchParams({});
-    }
+    if (searchQuery === '') return setSearchParams({});
 
     (async () => {
       const { results } = await searchMovies(searchQuery);
@@ -21,9 +19,8 @@ const Movies = () => {
 
   const onFormSubmit = e => {
     e.preventDefault();
-    const query = e.target.children.input.value;
+    const query = e.target.elements.input.value;
     setSearchParams({ query });
-    // e.target.reset();
   };
 
   return (
