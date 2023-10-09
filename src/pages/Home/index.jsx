@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <>
-      {movies && <MoviesList movies={movies} />}
+      {movies && <MoviesList movies={movies} to="movies/" title />}
       {loader && <p>Loading...</p>}
       {error && <p>Oops... {error}. Please reload the page to try again.</p>}
     </>

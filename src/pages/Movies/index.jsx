@@ -29,7 +29,7 @@ const Movies = () => {
         <input type="text" name="input" placeholder="Enter the movie title" />
         <button type="submit">Search</button>
       </form>
-      {movies && <MoviesList movies={movies} />}
+      {movies && <MoviesList movies={movies} to="" />}
     </>
   );
 };
