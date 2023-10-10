@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact_05_movies=self.webpackChunkreact_05_movies||[]).push([[640],{640:function(n,e,t){t.r(e);var c=t(689),r=t(184);e.default=function(){var n=(0,c.s0)();return(0,r.jsxs)("div",{children:[(0,r.jsx)("p",{children:"Page not found"}),(0,r.jsx)("button",{type:"button",onClick:function(){return n(-1)},children:"Go back"})]})}}}]);
-//# sourceMappingURL=640.0f842e64.chunk.js.map
