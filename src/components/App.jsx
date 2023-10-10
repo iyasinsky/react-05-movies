@@ -21,8 +21,8 @@ const App = () => {
               <Route path="cast" element={<Cast />} />
               <Route path="reviews" element={<Reviews />} />
             </Route>
+            <Route path="*" element={<p>Not found</p>} />
           </Route>
-          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </Suspense>
       <GlobalStyle />
