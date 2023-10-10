@@ -1,8 +1,8 @@
 {
-  "name": "react-create-app",
+  "name": "react-05-movies",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://iyasinsky.github.io/react-create-app/",
+  "homepage": "https://iyasinsky.github.io/react-05-movies/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
