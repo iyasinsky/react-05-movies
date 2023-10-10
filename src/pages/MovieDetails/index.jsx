@@ -1,7 +1,7 @@
-import MovieCard from 'components/MovieCard';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 import { getMovieDetails } from 'services/movieApi';
+import MovieCard from 'components/MovieCard';
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
@@ -29,7 +29,9 @@ const MovieDetails = () => {
       {loader && <p>Loading...</p>}
       {error && <p>Oops... {error}. Please reload the page to try again.</p>}
       {movie && <MovieCard movie={movie} />}
-      <Outlet />
+      <Suspense fallback={<p>MovieDetails Loading...</p>}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };

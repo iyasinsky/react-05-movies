@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Wrapper } from './index.styled';
 
@@ -9,12 +10,12 @@ const MovieCard = ({
 }) => {
   const posterImg = poster_path ? `${BASE_URL}${poster_path}` : DEFAULT_IMG;
   const location = useLocation();
-  console.log('MovieCard -> location:', location);
-  const backLinkHref = location.state?.from ?? '/';
+  const backLink = useRef(location.state?.from ?? '/');
+
   return (
     <>
       <button>
-        <Link to={backLinkHref}>← Go back</Link>
+        <Link to={backLink.current}>← Go back</Link>
       </button>
 
       <Wrapper>
